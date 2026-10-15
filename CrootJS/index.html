@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Peta gedung dan rute pejalan kaki di kampus ULBI menggunakan CrootJS.">
+  <title>Rute Kampus ULBI — CrootJS</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">U</div>
+    <div>
+      <p class="eyebrow">PETA KAMPUS</p>
+      <h1>Rute Kampus ULBI</h1>
+    </div>
+    <span class="tech">Powered by CrootJS</span>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <p class="eyebrow">NAVIGASI PEJALAN KAKI</p>
+      <h2>Cari rute</h2>
+      <p class="muted">Pilih gedung awal dan tujuan untuk menghitung rute terpendek pada polyline jalan yang tersedia.</p>
+
+      <label for="from">Titik berangkat</label>
+      <select id="from">
+        <option value="">Memuat lokasi…</option>
+      </select>
+
+      <button id="swap" class="swap-button" type="button" aria-label="Tukar titik berangkat dan tujuan">⇅ Tukar lokasi</button>
+
+      <label for="to">Titik tujuan</label>
+      <select id="to">
+        <option value="">Memuat lokasi…</option>
+      </select>
+
+      <button id="routeBtn" class="primary-button" type="button">Tampilkan rute</button>
+      <button id="resetBtn" class="secondary-button" type="button">Reset peta</button>
+
+      <div id="status" class="status" role="status">Memuat data kampus…</div>
+      <div id="routeInfo" class="route-info" hidden>
+        <span class="info-label">Perkiraan panjang garis rute</span>
+        <strong id="distance">—</strong>
+        <p class="muted small">Jarak dihitung mengikuti jaringan garis pada GeoJSON, bukan estimasi waktu berjalan.</p>
+      </div>
+
+      <div class="legend">
+        <div><span class="legend-box building"></span> Gedung kampus</div>
+        <div><span class="legend-line road"></span> Polyline jalan</div>
+        <div><span class="legend-line route"></span> Rute pilihan</div>
+      </div>
+      <p class="small muted note">Catatan: rute hanya bisa dihitung jika polyline jalan terhubung. Lengkapi garis pada setiap jalan dan persimpangan untuk hasil navigasi yang akurat.</p>
+    </section>
+
+    <section class="map-section">
+      <div class="map-heading">
+        <div>
+          <h2>Peta area kampus</h2>
+          <p class="muted">Klik gedung untuk melihat nama fiturnya. Geser dan zoom peta untuk menjelajah.</p>
+        </div>
+        <span id="featureCount" class="count-pill">Memuat…</span>
+      </div>
+      <div id="map" class="map" aria-label="Peta interaktif kampus ULBI"></div>
+      <p class="map-footnote">Peta dasar © OpenStreetMap contributors · Peta dan rute menggunakan modul CrootJS.</p>
+    </section>
+  </main>
+  <footer>Proyek peta kampus ULBI · HTML, CSS, ES Modules, CrootJS</footer>
+</body>
+</html>
