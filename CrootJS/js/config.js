@@ -1,49 +1,42 @@
-export const geojsonData = {
+window.geojsonData = {
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "title": "Rute Gojek GoRide",
-        "jalan_awal": "Jl. Kebon Kawung (Stasiun Bandung)",
-        "jalan_akhir": "Jl. Asia Afrika (Alun-Alun Bandung)",
-        "layanan": "GoRide",
-        "ongkos": "Rp10.000",
+        "title": "Garis lurus Asia Afrika ke ULBI",
         "tipe": "route"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [107.6025, -6.9126],
-          [107.6050, -6.9150],
-          [107.6097, -6.9218]
+          [107.6097, -6.9218],
+          [107.5767906, -6.8731011]
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "title": "TITIK AWAL (Penjemputan)",
-        "nama_jalan": "Jl. Kebon Kawung (Stasiun Bandung)",
-        "ongkos": "Rp10.000",
+        "title": "TITIK AWAL (Alun-Alun Bandung)",
+        "nama_jalan": "Alun-Alun Bandung (Jalan Asia Afrika)",
         "tipe": "start"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [107.6025, -6.9126]
+        "coordinates": [107.6097, -6.9218]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "title": "TITIK TUJUAN (Pengantaran)",
-        "nama_jalan": "Jl. Asia Afrika (Alun-Alun Bandung)",
-        "ongkos": "Rp10.000",
+        "title": "TITIK TUJUAN (ULBI)",
+        "nama_jalan": "Universitas Logistik dan Bisnis Internasional (Jl. Sariasih No. 54, Bandung)",
         "tipe": "end"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [107.6097, -6.9218]
+        "coordinates": [107.5767906, -6.8731011]
       }
     }
   ]

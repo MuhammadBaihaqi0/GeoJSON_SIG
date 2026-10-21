@@ -11,6 +11,7 @@
 <body>
 
   <div id="map"></div>
+  <div id="map-message" role="status" hidden></div>
 
   <!-- Panel Informasi Kanan Modern -->
   <div id="info-panel" class="card">
@@ -25,7 +26,7 @@
         <span class="dot blue"></span>
         <div class="timeline-content">
           <small>TITIK AWAL (PENJEMPUTAN)</small>
-          <strong id="val-awal">Jl. Kebon Kawung (Stasiun Bandung)</strong>
+          <strong id="val-awal">Alun-Alun Bandung (Jalan Asia Afrika)</strong>
         </div>
       </div>
       
@@ -35,7 +36,7 @@
         <span class="dot red"></span>
         <div class="timeline-content">
           <small>TITIK TUJUAN (PENGANTARAN)</small>
-          <strong id="val-tujuan">Jl. Asia Afrika (Alun-Alun Bandung)</strong>
+          <strong id="val-tujuan">Universitas Logistik dan Bisnis Internasional (Jl. Sariasih No. 54, Bandung)</strong>
         </div>
       </div>
     </div>
@@ -49,12 +50,12 @@
         <div class="price" id="val-ongkos">Rp10.000</div>
       </div>
       <div class="stat-box">
-        <small>Estimasi Jarak</small>
-        <div class="stat-val">1.8 km</div>
+        <small>Jarak Garis Lurus</small>
+        <div class="stat-val" id="val-jarak">Mencari rute...</div>
       </div>
       <div class="stat-box">
-        <small>Waktu Tempuh</small>
-        <div class="stat-val">~6 Menit</div>
+        <small>Estimasi Waktu Berkendara</small>
+        <div class="stat-val" id="val-waktu">Menghitung...</div>
       </div>
       <div class="stat-box">
         <small>Pembayaran</small>
@@ -63,11 +64,12 @@
     </div>
 
     <div class="card-footer" id="val-note">
-      💡 Klik garis rute atau pin lokasi untuk menyorot detailnya.
+      Garis ditampilkan lurus; estimasi waktu dihitung mengikuti jalan.
     </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
